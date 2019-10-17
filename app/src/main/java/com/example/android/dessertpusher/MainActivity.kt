@@ -83,6 +83,11 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         binding.dessertButton.setImageResource(currentDessert.imageId)
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("onRestart called")
+    }
+
     override fun onStart() {
         super.onStart()
         Timber.i("onStart called")
